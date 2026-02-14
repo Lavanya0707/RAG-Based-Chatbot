@@ -1,11 +1,11 @@
-# 🤖 RAG-Based Document Question Answering Chatbot
+# RAG-Based Document Question Answering Chatbot
 
 A **Retrieval-Augmented Generation (RAG) Chatbot** that allows users to ask questions from their documents and get **accurate, context-based answers** along with **source references**.  
 The system uses **vector search + Large Language Models (LLMs)** to ensure answers are generated strictly from the provided documents.
 
 ---
 
-## 📌 Problem Statement
+## Problem Statement
 
 Traditional chatbots often generate answers without verifying the source, leading to **hallucinations** or incorrect information.  
 This project solves that problem by:
@@ -15,18 +15,18 @@ This project solves that problem by:
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔍 Semantic document search using **FAISS**
-- 🧠 Context-aware answers using **Mistral LLM**
-- 📄 Source citation with page numbers
-- ⚡ Caching for repeated questions
-- 📝 Automatic MCQ generation from documents
-- 🖥️ User-friendly web interface using **Streamlit**
+- Semantic document search using **FAISS**
+- Context-aware answers using **Mistral LLM**
+- Source citation with page numbers
+- Caching for repeated questions
+- Automatic MCQ generation from documents
+- User-friendly web interface using **Streamlit**
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |--------|-------------|
@@ -40,7 +40,7 @@ This project solves that problem by:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ├── Main code.ipynb # Notebook for experimentation and setup
 ├── Backend code.py # RAG pipeline, retrieval & LLM logic
@@ -52,7 +52,7 @@ This project solves that problem by:
 
 ---
 
-## ⚙️ How the System Works (Architecture)
+##  How the System Works (Architecture)
 
 1. **Document Embedding**
    - Documents are converted into vector embeddings using HuggingFace models
@@ -69,7 +69,7 @@ This project solves that problem by:
 
 ---
 
-## 🧠 Backend Logic
+## Backend Logic
 
 The backend handles:
 - Loading vector database
@@ -78,11 +78,11 @@ The backend handles:
 - Caching repeated questions
 - MCQ generation from documents  
 
-📌 Implemented in: `Backend code.py`
+ Implemented in: `Backend code.py`
 
 ---
 
-## 🖥️ User Interface
+## User Interface
 
 The frontend is built using **Streamlit** and provides:
 - Text input for questions
@@ -90,17 +90,39 @@ The frontend is built using **Streamlit** and provides:
 - Source references
 - Loading spinner for better UX  
 
-📌 Implemented in: `UI code.py`
+Implemented in: `UI code.py`
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 
-### 1️⃣ Prerequisites
+### Prerequisites
 - Python 3.9+
 - Ollama installed
 - Mistral model pulled:
+
+### Install Dependencies
+pip install streamlit langchain faiss-cpu sentence-transformers ollama
+
+### Start the Application
+streamlit run UI\ code.py
+
+
+### Sample Use Cases
+ - Ask questions from PDFs, notes, or study material
+ - Internal company knowledge chatbot
+ - Exam preparation with MCQ generation
+ - Research document analysis
+
+### Future Enhancements
+ - PDF upload from UI
+ - Multi-document support
+ - Cloud deployment (AWS / Azure)
+ - Authentication & user history
+ - Advanced reranking techniques
+
 ```bash
-ollama pull mistral
+
+
 
 
