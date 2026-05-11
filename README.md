@@ -123,7 +123,6 @@ streamlit run UI\ code.py
 
 ```bash
 
-<img width="1600" height="767" alt="chatbot interface" src="https://github.com/user-attachments/assets/a9458b9f-da6f-49dd-ae29-aa3eaf8688db" />
 
 
 
